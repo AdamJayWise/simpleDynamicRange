@@ -1,0 +1,100 @@
+
+<html>
+
+    <head>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300" rel="stylesheet"/>
+
+        <style>
+
+            body {
+                font-family: 'Open Sans Condensed', sans-serif;
+            }
+
+            .vertSpacer {
+                height : 20px;
+            }
+
+            #calculatorTable {
+                box-shadow: 5px 5px 10px gray;
+            }
+
+            #calculatorTable th {
+                background-color: #1c2674;
+                color: white;
+                padding : 5px;
+            }
+
+            .labelTd {
+                padding : 5px;
+                text-align: right;
+                border-right : 2px solid #ddd;
+                border-right-style: ridge;
+                font-size: 18px;
+            }
+
+            .resultTd {
+                padding : 5px;
+                text-align: left;
+                font-family: arial;
+                font-size: 14px;
+            }
+
+            .result {
+                text-align : left;
+            }
+
+            input {
+                font-size: 14px;
+                
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class = "heading">
+            Simple Dynamic Range Calculator
+        </div>
+
+
+        <div class = "vertSpacer"></div>
+
+        <div>
+            
+            <table id = "calculatorTable">
+                <tr><th colspan="2">Dynamic Range</th></tr>
+                <tr>
+                    <td class = "labelTd">Pixel Well Depth, e<sup>-</sup></td>
+                    <td class = "resultTd"><input id = "wellDepth" value = "10000"></td>
+                </tr>
+
+                <tr>
+                    <td class = "labelTd"> Read Noise, e<sup>-</sup></td>
+                    <td class = "resultTd"><input id = "readNoise" value = "1"></td>
+                </tr>
+
+                <tr>
+                    <td class = "labelTd">Dynamic Range</td>
+                    <td class = "resultTd"><span class = "result" id = "dynamicRange"> 10000:1 <span> </td>
+                </tr>
+
+                <tr>
+                    <td class = "labelTd">Dynamic Range, dB</td>
+                    <td class = "resultTd"><span class = "result" id = "dynamicRangeDb">40 dB </span></td>
+                </tr>
+
+
+            </table>
+        </div>
+    </body>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+    <script src = "js/simpleDynamicRange.js"></script>
+
+  </html>
